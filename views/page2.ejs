@@ -1,0 +1,24 @@
+<% page = { 'title' : 'PAGE_TITLE', 'key': 'INDEX_PAGE_NAME'} %>
+<% assets = { 'css' : [], 'js' : [] } %>
+<div id="main" class="experiments">
+  <div class="no-layout">
+    <h1 class="font21 serif">Welcome to another page</h1>
+    <section class="basic">
+      <h2><%-mymsg%></h2>
+      <h3>Conact Info:</h3>
+      <p>Sign: <%-mysign%></p>
+      <p>Name: <%-mycontact.first + " " + mycontact.last%></p>
+      <p>Phone: <%-mycontact.cell%></p>
+      <p>Children: </p>
+      <ul>
+      	<%
+      	var len = mychildren.length;
+      	for (var i=0; i<len; i++){
+      		var child = mychildren[i];
+		%>
+		<li><%-child %></li>
+      	<% } %>
+	</ul>
+    </section>
+  </div>
+</div>
